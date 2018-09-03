@@ -26,7 +26,7 @@ local function micro_furnace_entity(data)
     fast_replaceable_group = "furnace",
     ingredient_count = 4,
     crafting_speed = tier.multiplier * 140/3,
-    energy_usage = tier.multiplier * 8640 .. "kW",
+    energy_usage = tier.multiplier * 4200 .. "kW",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
