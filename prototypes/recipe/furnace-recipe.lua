@@ -5,13 +5,13 @@ data:extend{
     category = "micro-furnace-smelting",
     normal = {
       enabled = false,
-      energy_required = 17.5,
+      energy_required = 16,
       ingredients = {{"iron-ore", 5}},
       result = "steel-plate",
     },
     expensive = {
       enabled = false,
-      energy_required = 35,
+      energy_required = 32,
       ingredients = {{"iron-ore", 10}},
       result = "steel-plate",
     },

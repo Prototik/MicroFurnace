@@ -1,3 +1,5 @@
+require "prototypes.technology.vanilla"
+
 data:extend{
   {
     type = "technology",
@@ -5,11 +7,11 @@ data:extend{
     icon_size = 128,
     icon = "__base__/graphics/technology/advanced-material-processing.png",
     effects = {{type = "unlock-recipe", recipe = "micro-turbo-furnace"}},
-    prerequisites = {"micro-express-furnace", "purple-loader"},
+    prerequisites = {"micro-express-furnace"},
     unit = {
       count = 1600,
       time = 30,
-      ingredients = data.raw.technology["bob-logistics-4"].unit.ingredients,
+      ingredients = data.raw.technology["logistics-4"].unit.ingredients,
     },
     order = "c-d-d",
   },
@@ -19,11 +21,11 @@ data:extend{
     icon_size = 128,
     icon = "__base__/graphics/technology/advanced-material-processing.png",
     effects = {{type = "unlock-recipe", recipe = "micro-ultimate-furnace"}},
-    prerequisites = {"micro-turbo-furnace", "green-loader"},
+    prerequisites = {"micro-turbo-furnace"},
     unit = {
       count = 3200,
       time = 30,
-      ingredients = data.raw.technology["bob-logistics-5"].unit.ingredients,
+      ingredients = data.raw.technology["logistics-5"].unit.ingredients,
     },
     order = "c-d-e",
   },

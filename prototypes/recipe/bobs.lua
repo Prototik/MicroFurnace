@@ -1,3 +1,5 @@
+require "prototypes.recipe.vanilla"
+
 data:extend{
   {
     type = "recipe",

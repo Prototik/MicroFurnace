@@ -1,0 +1,14 @@
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+  Features:
+    - Updated for Factorio .17
+    - Tweaked for new Bob's belt speeds
+    - Top-tier furnaces now has "bunch" recipes in order to avoid uneffective work
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+  Bugfixes:
+    - Fix missing pollution.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+  Features:
+    - Allow native steel processing to be affected by productivity modules

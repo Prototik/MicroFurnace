@@ -2,6 +2,14 @@ local function micro_furnace_entity(data)
   local name = data.name
   local tier = data.tier
 
+  local categories = {"micro-furnace-smelting"}
+  
+  if tier.bunch then
+    table.insert(categories, "micro-furnace-bunch-smelting")
+  else
+    table.insert(categories, "smelting")
+  end
+
   return {
     type = "assembling-machine",
     name = name,
@@ -22,11 +30,11 @@ local function micro_furnace_entity(data)
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     module_specification = {module_slots = tier.module_slots, module_info_icon_shift = {0, 0.8}},
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-    crafting_categories = {"smelting", "micro-furnace-smelting"},
+    crafting_categories = categories,
     fast_replaceable_group = "furnace",
     ingredient_count = 4,
-    crafting_speed = tier.multiplier * 140/3,
-    energy_usage = tier.multiplier * 4200 .. "kW",
+    crafting_speed = tier.multiplier * 48,
+    energy_usage = tier.multiplier * 4320 .. "kW",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",

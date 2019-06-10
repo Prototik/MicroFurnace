@@ -10,9 +10,9 @@ data:extend{
       count = 200,
       time = 30,
       ingredients = {
-        {"science-pack-1", 2},
-        {"science-pack-2", 2},
-        {"science-pack-3", 1},
+        {"automation-science-pack", 2},
+        {"logistic-science-pack", 2},
+        {"utility-science-pack", 1},
       }
     },
     order = "c-e-a",
