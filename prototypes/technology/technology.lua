@@ -12,7 +12,7 @@ data:extend{
       ingredients = {
         {"automation-science-pack", 2},
         {"logistic-science-pack", 2},
-        {"utility-science-pack", 1},
+        {"chemical-science-pack", 1},
       }
     },
     order = "c-e-a",

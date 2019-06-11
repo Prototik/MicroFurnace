@@ -1,5 +1,4 @@
 local function micro_furnace_entity(data)
-  local name = data.name
   local tier = data.tier
 
   local categories = {"micro-furnace-smelting"}
@@ -12,11 +11,11 @@ local function micro_furnace_entity(data)
 
   return {
     type = "assembling-machine",
-    name = name,
+    name = tier.target,
     icons = {{icon = "__base__/graphics/icons/electric-furnace.png", tint = tier.color}},
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
-    minable = {mining_time = 5, result = name},
+    minable = {mining_time = 5, result = tier.target},
     max_health = 500,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",

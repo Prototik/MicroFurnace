@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+  Features:
+    - Removed hard dependency on Loader Redux, throught you still need some loader mod
+    - Added support for Factorio Extended Plus belts
+    - Added integration for Deadlock's Stacking Beltboxes
+    - Thumbnail for mod info screen
+---------------------------------------------------------------------------------------------------
 Version: 2.0.0
   Features:
     - Updated for Factorio .17

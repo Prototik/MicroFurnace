@@ -7,7 +7,7 @@ data:extend{
       enabled = false,
       ingredients = {
         {"electric-furnace", 48},
-        {"loader", 2},
+        {"stack-inserter", 5},
         {"steel-plate", 50},
         {"electronic-circuit", 20},
         {"iron-gear-wheel", 20},
@@ -20,7 +20,7 @@ data:extend{
       enabled = false,
       ingredients = {
         {"electric-furnace", 96},
-        {"loader", 10},
+        {"stack-inserter", 10},
         {"steel-plate", 200},
         {"advanced-circuit", 200},
         {"iron-gear-wheel", 200},
@@ -38,7 +38,7 @@ data:extend{
       enabled = false,
       ingredients = {
         {"micro-furnace", 2},
-        {"fast-loader", 2},
+        {"stack-inserter", 10},
         {"steel-plate", 100},
         {"advanced-circuit", 20},
         {"iron-gear-wheel", 20},
@@ -51,7 +51,7 @@ data:extend{
       enabled = false,
       ingredients = {
         {"micro-furnace", 4},
-        {"fast-loader", 10},
+        {"stack-inserter", 20},
         {"steel-plate", 400},
         {"advanced-circuit", 200},
         {"iron-gear-wheel", 200},
@@ -69,7 +69,7 @@ data:extend{
       enabled = false,
       ingredients = {
         {"micro-fast-furnace", 2},
-        {"express-loader", 2},
+        {"stack-inserter", 15},
         {"steel-plate", 200},
         {"advanced-circuit", 50},
         {"iron-gear-wheel", 20},
@@ -83,7 +83,7 @@ data:extend{
       enabled = false,
       ingredients = {
         {"micro-fast-furnace", 4},
-        {"express-loader", 10},
+        {"stack-inserter", 30},
         {"steel-plate", 800},
         {"processing-unit", 200},
         {"iron-gear-wheel", 200},
