@@ -30,7 +30,7 @@ local vanilla_tiers = {
     color        = colors.tier_4,
     multiplier   = 4,
     module_slots = 4,
-    bunch        = false,
+    bunch        = true,
     target       = "micro-turbo-furnace",
   },
   tier_5 = {
@@ -38,7 +38,7 @@ local vanilla_tiers = {
     color        = colors.tier_5,
     multiplier   = 5,
     module_slots = 5,
-    bunch        = false,
+    bunch        = true,
     target       = "micro-ultimate-furnace",
   },
 }

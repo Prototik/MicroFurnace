@@ -1,21 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.2 (unreleased)
+  - Mark tiers 4 & 5 of FEP furnaces as "bunchable"
+---------------------------------------------------------------------------------------------------
 Version: 2.0.1
-  Features:
-    - Removed hard dependency on Loader Redux, throught you still need some loader mod
-    - Added support for Factorio Extended Plus belts
-    - Added integration for Deadlock's Stacking Beltboxes
-    - Thumbnail for mod info screen
+  - Removed hard dependency on Loader Redux, throught you still need some loader mod
+  - Added support for Factorio Extended Plus belts
+  - Added integration for Deadlock's Stacking Beltboxes
+  - Thumbnail for mod info screen
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
-  Features:
-    - Updated for Factorio .17
-    - Tweaked for new Bob's belt speeds
-    - Top-tier furnaces now has "bunch" recipes in order to avoid uneffective work
+  - Updated for Factorio .17
+  - Tweaked for new Bob's belt speeds
+  - Top-tier furnaces now has "bunch" recipes in order to avoid uneffective work
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
-  Bugfixes:
-    - Fix missing pollution.
+  - Fix missing pollution.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
-  Features:
-    - Allow native steel processing to be affected by productivity modules
+  - Allow native steel processing to be affected by productivity modules
