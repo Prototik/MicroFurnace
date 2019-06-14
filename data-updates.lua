@@ -23,7 +23,11 @@ local function bunch_recipe(recipe, multiplier)
 
     if recipe.results then
       for _, result in pairs(recipe.results) do
-        result[2] = result[2] * multiplier
+        if result[2] then
+	  result[2] = result[2] * multiplier
+        else
+	  result[2] = multiplier
+        end
       end
     elseif recipe.result_count then
       recipe.result_count = recipe.result_count * multiplier
