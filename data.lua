@@ -3,23 +3,20 @@ require "prototypes.item.item-groups"
 require "prototypes.recipe.furnace-recipe"
 require "prototypes.technology.technology"
 
+local branch = "vanilla"
 
-if mods["boblogistics"] then
-  require "prototypes.entity.bobs"
-  require "prototypes.item.bobs"
-  require "prototypes.recipe.bobs"
-  require "prototypes.technology.bobs"
+if mods["Krastorio"] then
+  branch = "krastorio"
+elseif mods["boblogistics"] then
+  branch = "bobs"
 elseif mods["FactorioExtended-Plus-Transport"] then
-  require "prototypes.entity.fep"
-  require "prototypes.item.fep"
-  require "prototypes.recipe.fep"
-  require "prototypes.technology.fep"
-else
-  require "prototypes.entity.vanilla"
-  require "prototypes.item.vanilla"
-  require "prototypes.recipe.vanilla"
-  require "prototypes.technology.vanilla"
+  branch = "fep"
 end
+
+require ("prototypes.entity." .. branch)
+require ("prototypes.item." .. branch)
+require ("prototypes.recipe." .. branch)
+require ("prototypes.technology." .. branch)
 
 if mods["deadlock-beltboxes-loaders"] then
   require "prototypes.recipe.dbl"

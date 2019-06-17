@@ -1,6 +1,10 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.0.2 (unreleased)
+Version: 2.1.0
+  - Add support for Krastorio
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
   - Mark tiers 4 & 5 of FEP furnaces as "bunchable"
+  - Fixed crash when creating bunch recipes from some modded recipes
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
   - Removed hard dependency on Loader Redux, throught you still need some loader mod

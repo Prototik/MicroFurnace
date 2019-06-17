@@ -1,6 +1,6 @@
 {
   "name": "MicroFurnace",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "title": "Micro Furnace",
   "author": "Prototik",
   "contact": "me@prok.pw",
@@ -11,6 +11,7 @@
     "base >= 0.17",
     "? boblogistics >= 0.17.8",
     "? FactorioExtended-Plus-Transport >= 0.2.6",
-    "? deadlock-beltboxes-loaders >= 2.2.0"
+    "? deadlock-beltboxes-loaders >= 2.2.0",
+    "? Krastorio >= 1.1.13"
   ]
 }

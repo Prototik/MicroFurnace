@@ -1,2 +1,3 @@
 require "prototypes.recipe.vanilla"
-require "prototypes.recipe.top_tiers"
+require "prototypes.recipe.tier4"
+require "prototypes.recipe.tier5"

@@ -90,4 +90,5 @@ return {
   vanilla = vanilla_tiers,
   bob = bob_tiers,
   fep = vanilla_tiers,
+  krastorio = vanilla_tiers,
 }
