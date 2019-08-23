@@ -1,4 +1,7 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.1
+  - Fix crash when bobplates without boblogistics installed
+---------------------------------------------------------------------------------------------------
 Version: 2.2.0
   - Fixed productivity modules for bunched recipes
   - Add support for bobplates's chemical & metal-mixing recipes

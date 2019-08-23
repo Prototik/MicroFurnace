@@ -14,6 +14,10 @@ data:extend{
     tier = tiers.bobplates.tier_3,
     order = "d[micro-furnace]-c",
   },
+}
+
+if mods["boblogistics"] then
+data:extend{
   items.micro_furnace{
     tier = tiers.bobplates.tier_4,
     order = "d[micro-furnace]-d",
@@ -23,3 +27,4 @@ data:extend{
     order = "d[micro-furnace]-e",
   },
 }
+end

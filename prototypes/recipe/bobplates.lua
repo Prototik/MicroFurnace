@@ -1,3 +1,6 @@
 require "prototypes.recipe.vanilla"
-require "prototypes.recipe.tier4"
-require "prototypes.recipe.tier5"
+
+if mods["boblogistics"] then
+  require "prototypes.recipe.tier4"
+  require "prototypes.recipe.tier5"
+end
