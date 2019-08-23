@@ -9,6 +9,12 @@ local function micro_furnace_entity(data)
     table.insert(categories, "smelting")
   end
 
+  if tier.categories then
+    for _, category in pairs(tier.categories) do
+      table.insert(categories, category)
+    end
+  end
+
   return {
     type = "assembling-machine",
     name = tier.target,
@@ -27,6 +33,17 @@ local function micro_furnace_entity(data)
     },
     collision_box = {{-0.25, -0.25}, {0.25, 0.25}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    fluid_boxes = tier.fluid and {
+      {
+        production_type = "input",
+        pipe_picture = assembler3pipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = -1,
+        pipe_connections = {{ type="input", position = {0, -1} }}
+      },
+      off_when_no_fluid_recipe = true
+    } or nil,
     module_specification = {module_slots = tier.module_slots, module_info_icon_shift = {0, 0.8}},
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = categories,

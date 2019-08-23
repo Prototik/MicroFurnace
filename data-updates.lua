@@ -4,15 +4,6 @@ local productivity_affected_recipes = {
   "micro-steel-plate"
 }
 
-for _, module in pairs(data.raw["module"]) do
-  if module.name:find("productivity") and module.limitation then
-    for _, recipe in ipairs(productivity_affected_recipes) do
-      table.insert(module.limitation, recipe)
-    end
-  end
-end
-
-
 -- Create bunch recipes, update technology tree to unlock additional recipes
 local function bunch_recipe(recipe, multiplier)
     recipe.energy_required = recipe.energy_required * multiplier
@@ -55,6 +46,12 @@ for _, recipe in pairs(data.raw["recipe"]) do
 
     data.raw["recipe"][bunch.name] = bunch
     bunch_recipe_mapping[recipe.name] = bunch.name
+
+    for _, module in pairs(data.raw["module"]) do
+      if module.limitation and module.limitation[recipe.name] ~= nil then
+        table.insert(module.limitation, bunch.name)
+      end
+    end
   end
 end
 
@@ -67,6 +64,14 @@ for _, technology in pairs(data.raw["technology"]) do
           recipe = bunch_recipe_mapping[effect.recipe],
         })
       end
+    end
+  end
+end
+
+for _, module in pairs(data.raw["module"]) do
+  if module.name:find("productivity") and module.limitation then
+    for _, recipe in ipairs(productivity_affected_recipes) do
+      table.insert(module.limitation, recipe)
     end
   end
 end
