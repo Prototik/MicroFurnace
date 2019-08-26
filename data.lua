@@ -7,8 +7,6 @@ local branch = "vanilla"
 
 if mods["Krastorio"] then
   branch = "krastorio"
-elseif mods["bobplates"] then
-  branch = "bobplates"
 elseif mods["boblogistics"] then
   branch = "boblogistics"
 elseif mods["FactorioExtended-Plus-Transport"] then

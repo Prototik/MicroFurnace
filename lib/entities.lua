@@ -2,6 +2,11 @@ local function micro_furnace_entity(data)
   local tier = data.tier
 
   local categories = {"micro-furnace-smelting"}
+
+  if mods["bobplates"] then
+    table.insert(categories, "chemical-furnace")
+    table.insert(categories, "mixing-furnace")
+  end
   
   if tier.bunch then
     table.insert(categories, "micro-furnace-bunch-smelting")
@@ -33,17 +38,25 @@ local function micro_furnace_entity(data)
     },
     collision_box = {{-0.25, -0.25}, {0.25, 0.25}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-    fluid_boxes = tier.fluid and {
+    fluid_boxes = {
       {
         production_type = "input",
         pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, -1} }}
+        pipe_connections = {{ type="input-output", position = {0, -1} }}
+      },
+      {
+        production_type = "input",
+        pipe_picture = assembler3pipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = -1,
+        pipe_connections = {{ type="input-output", position = {0, 1} }}
       },
       off_when_no_fluid_recipe = true
-    } or nil,
+    },
     module_specification = {module_slots = tier.module_slots, module_info_icon_shift = {0, 0.8}},
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = categories,

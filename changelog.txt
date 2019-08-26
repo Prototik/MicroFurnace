@@ -1,31 +1,58 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.2
+Date: 2019.08.26
+  Changes:
+    - Allow input fluid to passthrough 
+  Fixes:
+    - Simplify logic of furnace speed calculations
+---------------------------------------------------------------------------------------------------
 Version: 2.2.1
-  - Fix crash when bobplates without boblogistics installed
+Date: 2019.08.23
+  Fixes:
+    - Fix crash when bobplates without boblogistics installed
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.0
-  - Fixed productivity modules for bunched recipes
-  - Add support for bobplates's chemical & metal-mixing recipes
+Date: 2019.08.23
+  Features:
+    - Add support for bobplates's chemical & metal-mixing recipes
+  Fixes:
+    - Fixed productivity modules for bunched recipes
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.0
-  - Add support for Krastorio
+Date: 2019.06.17
+  Features:
+    - Add support for Krastorio
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
-  - Mark tiers 4 & 5 of FEP furnaces as "bunchable"
-  - Fixed crash when creating bunch recipes from some modded recipes
+Date: 2019.06.14
+  Features:
+    - Mark tiers 4 & 5 of FEP furnaces as "bunchable"
+  Fixes:
+    - Fixed crash when creating bunch recipes from some modded recipes
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
-  - Removed hard dependency on Loader Redux, throught you still need some loader mod
-  - Added support for Factorio Extended Plus belts
-  - Added integration for Deadlock's Stacking Beltboxes
-  - Thumbnail for mod info screen
+Date: 2019.06.11
+  Changes:
+    - Removed hard dependency on Loader Redux, throught you still need some loader mod
+  Features:
+    - Added support for Factorio Extended Plus belts
+    - Added integration for Deadlock's Stacking Beltboxes
+    - Thumbnail for mod info screen
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
-  - Updated for Factorio .17
-  - Tweaked for new Bob's belt speeds
-  - Top-tier furnaces now has "bunch" recipes in order to avoid uneffective work
+Date: 2019.06.10
+  Changes:
+    - Updated for Factorio .17
+    - Tweaked for new Bob's belt speeds
+  Features:
+    - Top-tier furnaces now has "bunch" recipes in order to avoid uneffective work
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
-  - Fix missing pollution.
+Date: 2018.09.03
+  Fixes:
+    - Fix missing pollution.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
-  - Allow native steel processing to be affected by productivity modules
+Date: 2018.08.29
+  Changes:
+    - Allow native steel processing to be affected by productivity modules
