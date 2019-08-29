@@ -4,21 +4,29 @@ local productivity_affected_recipes = {
   "micro-steel-plate"
 }
 
+local function bunch_item(item, multiplier)
+  if item.amount then
+    item.amount = item.amount * multiplier
+  elseif item[2] then
+    item[2] = item[2] * multiplier
+  elseif item.name then
+    item.amount = multiplier
+  else
+    item[2] = multiplier
+  end
+end
+
 -- Create bunch recipes, update technology tree to unlock additional recipes
 local function bunch_recipe(recipe, multiplier)
     recipe.energy_required = recipe.energy_required * multiplier
 
     for _, ingredient in pairs(recipe.ingredients) do
-      ingredient[2] = ingredient[2] * multiplier
+      bunch_item(ingredient, multiplier)
     end
 
     if recipe.results then
       for _, result in pairs(recipe.results) do
-        if result[2] then
-	  result[2] = result[2] * multiplier
-        else
-	  result[2] = multiplier
-        end
+        bunch_item(result, multiplier)
       end
     elseif recipe.result_count then
       recipe.result_count = recipe.result_count * multiplier
