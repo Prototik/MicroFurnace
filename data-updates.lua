@@ -4,6 +4,12 @@ local productivity_affected_recipes = {
   "micro-steel-plate"
 }
 
+local recipe_categories_to_bunch = {
+  "smelting",
+  "chemical-furnace", -- bobs
+  "mixing-furnace", -- bobs
+}
+
 local function bunch_item(item, multiplier)
   if item.amount then
     item.amount = item.amount * multiplier
@@ -17,8 +23,16 @@ local function bunch_item(item, multiplier)
 end
 
 -- Create bunch recipes, update technology tree to unlock additional recipes
-local function bunch_recipe(recipe, multiplier)
-    recipe.energy_required = recipe.energy_required * multiplier
+local function bunch_recipe(recipe, multiplier, recipe_name)
+    if recipe.energy_required then
+      recipe.energy_required = recipe.energy_required * multiplier
+    else
+      recipe.energy_required = 0.5 * multiplier
+    end
+
+    recipe.hide_from_player_crafting = true
+    recipe.always_show_made_in = true
+    recipe.allow_decomposition = false
 
     for _, ingredient in pairs(recipe.ingredients) do
       bunch_item(ingredient, multiplier)
@@ -35,30 +49,38 @@ local function bunch_recipe(recipe, multiplier)
     end
 end
 
-local bunch_multiplier = 2
+local bunch_multiplier = settings.startup["micro-furnace-bunch-multiplier"].value
 
 local bunch_recipe_mapping = {}
 
-for _, recipe in pairs(data.raw["recipe"]) do
-  if recipe.category == "smelting" then
-    local bunch = table.deepcopy(recipe)
-    bunch.category = "micro-furnace-bunch-smelting"
-    bunch.name = "micro-furnace-bunch-" .. bunch.name
+local function bunch_recipe_prototype(recipe)
+  local bunch = table.deepcopy(recipe)
+  bunch.category = "micro-furnace-bunch-smelting"
+  bunch.name = "micro-furnace-bunch-" .. bunch.name
+  bunch.localised_description = {"recipe-description.bunch-smelting"}
 
-    if bunch.normal and bunch.expensive then
-      bunch_recipe(bunch.normal, bunch_multiplier)
-      bunch_recipe(bunch.expensive, bunch_multiplier)
-    else
-      bunch_recipe(bunch, bunch_multiplier)
+  if bunch.normal and bunch.expensive then
+    bunch_recipe(bunch.normal, bunch_multiplier, recipe.name)
+    bunch_recipe(bunch.expensive, bunch_multiplier, recipe.name)
+  else
+    bunch_recipe(bunch, bunch_multiplier, recipe.name)
+  end
+
+  data.raw["recipe"][bunch.name] = bunch
+  bunch_recipe_mapping[recipe.name] = bunch.name
+
+  for _, module in pairs(data.raw["module"]) do
+    if module.limitation and module.limitation[recipe.name] ~= nil then
+      table.insert(module.limitation, bunch.name)
     end
+  end
+end
 
-    data.raw["recipe"][bunch.name] = bunch
-    bunch_recipe_mapping[recipe.name] = bunch.name
-
-    for _, module in pairs(data.raw["module"]) do
-      if module.limitation and module.limitation[recipe.name] ~= nil then
-        table.insert(module.limitation, bunch.name)
-      end
+for _, recipe in pairs(data.raw["recipe"]) do
+  for _, bunch_category in pairs(recipe_categories_to_bunch) do
+    if bunch_category == recipe.category then
+      bunch_recipe_prototype(recipe)
+      break
     end
   end
 end

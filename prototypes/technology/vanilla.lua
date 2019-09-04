@@ -5,7 +5,7 @@ data:extend{
     icon_size = 128,
     icon = "__base__/graphics/technology/advanced-material-processing.png",
     effects = {{type = "unlock-recipe", recipe = "micro-furnace"}},
-    prerequisites = {"advanced-material-processing"},
+    prerequisites = {"advanced-material-processing-2"},
     unit = {
       count = 200,
       time = 30,

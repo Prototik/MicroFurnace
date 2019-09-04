@@ -6,7 +6,7 @@ local vanilla_tiers = {
     color        = colors.tier_1,
     multiplier   = 1,
     module_slots = 2,
-    bunch        = false,
+    bunch_only   = false,
     target       = "micro-furnace",
   },
   tier_2 = {
@@ -14,7 +14,7 @@ local vanilla_tiers = {
     color        = colors.tier_2,
     multiplier   = 2,
     module_slots = 3,
-    bunch        = false,
+    bunch_only   = false,
     target       = "micro-fast-furnace",
   },
   tier_3 = {
@@ -22,7 +22,7 @@ local vanilla_tiers = {
     color        = colors.tier_3,
     multiplier   = 3,
     module_slots = 4,
-    bunch        = false,
+    bunch_only   = false,
     target       = "micro-express-furnace",
   },
   tier_4 = {
@@ -30,7 +30,7 @@ local vanilla_tiers = {
     color        = colors.tier_4,
     multiplier   = 4,
     module_slots = 4,
-    bunch        = true,
+    bunch_only   = true,
     target       = "micro-turbo-furnace",
   },
   tier_5 = {
@@ -38,7 +38,7 @@ local vanilla_tiers = {
     color        = colors.tier_5,
     multiplier   = 5,
     module_slots = 5,
-    bunch        = true,
+    bunch_only   = true,
     target       = "micro-ultimate-furnace",
   },
 }
@@ -49,7 +49,7 @@ local boblogistics_tiers = {
     color        = colors.tier_1,
     multiplier   = 2,
     module_slots = 2,
-    bunch        = false,
+    bunch_only   = false,
     target       = vanilla_tiers.tier_1.target
   },
   tier_2 = {
@@ -57,7 +57,7 @@ local boblogistics_tiers = {
     color        = colors.tier_2,
     multiplier   = 3,
     module_slots = 3,
-    bunch        = false,
+    bunch_only   = false,
     target       = vanilla_tiers.tier_2.target,
   },
   tier_3 = {
@@ -65,7 +65,7 @@ local boblogistics_tiers = {
     color        = colors.tier_3,
     multiplier   = 4,
     module_slots = 4,
-    bunch        = false,
+    bunch_only   = false,
     target       = vanilla_tiers.tier_3.target,
   },
   tier_4 = {
@@ -73,7 +73,7 @@ local boblogistics_tiers = {
     color        = colors.tier_4,
     multiplier   = 5,
     module_slots = 4,
-    bunch        = true,
+    bunch_only   = true,
     target       = vanilla_tiers.tier_4.target,
   },
   tier_5 = {
@@ -81,7 +81,7 @@ local boblogistics_tiers = {
     color        = colors.tier_5,
     multiplier   = 6,
     module_slots = 5,
-    bunch        = true,
+    bunch_only   = true,
     target       = vanilla_tiers.tier_5.target,
   },
 }

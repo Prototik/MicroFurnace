@@ -1,16 +1,14 @@
 local function micro_furnace_entity(data)
   local tier = data.tier
 
-  local categories = {"micro-furnace-smelting"}
+  local categories = {"micro-furnace-smelting", "micro-furnace-bunch-smelting"}
 
   if mods["bobplates"] then
     table.insert(categories, "chemical-furnace")
     table.insert(categories, "mixing-furnace")
   end
-  
-  if tier.bunch then
-    table.insert(categories, "micro-furnace-bunch-smelting")
-  else
+
+  if not tier.bunch_only then
     table.insert(categories, "smelting")
   end
 
@@ -25,12 +23,11 @@ local function micro_furnace_entity(data)
     name = tier.target,
     icons = {{icon = "__base__/graphics/icons/electric-furnace.png", tint = tier.color}},
     icon_size = 32,
-    flags = {"placeable-player", "player-creation"},
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 5, result = tier.target},
     max_health = 500,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    light = {intensity = 1, size = 8},
     resistances = {
       {type = "fire",     percent = 80},
       {type = "acid",     percent = 80},
@@ -67,7 +64,7 @@ local function micro_furnace_entity(data)
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.005,
+      emissions_per_minute = 1,
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {

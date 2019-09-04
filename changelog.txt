@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.0
+  Changes:
+    - Mask bunch recipes from handcrafting
+    - Make bunch recipes more noticeable from normal ones
+    - Increase bunch multiplier to 20 and allow it configure via mod settings
+    - Allow to select bunch recipes on all furnace tiers
+    - Generate bunch recipes for bob's chemical and metal-mixing furnaces too
+  Fixes:
+    - MicroFurnace now required "Advanced material processing 2" instead of 1 tier
+---------------------------------------------------------------------------------------------------
 Version: 2.2.3
 Date: 2019.08.29
   Fixes:
