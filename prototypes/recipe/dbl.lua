@@ -1,19 +1,3 @@
-data:extend{
-  {
-    type = "recipe",
-    name = "micro-deadlock-stack-steel-plate",
-    category = "micro-furnace-smelting",
-    normal = {
-      enabled = false,
-      energy_required = 3.2,
-      ingredients = {{"deadlock-stack-iron-ore", 1}},
-      result = "steel-plate",
-    },
-    expensive = {
-      enabled = false,
-      energy_required = 6.4,
-      ingredients = {{"deadlock-stack-iron-ore", 2}},
-      result = "steel-plate",
-    },
-  },
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:488bcc22a75a26555a207a70ce766b64f0c4bc08e6567fea053e55998154b3b4
+size 452

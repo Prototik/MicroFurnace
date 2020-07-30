@@ -1,21 +1,3 @@
-data:extend{
-  {
-    type = "technology",
-    name = "micro-turbo-furnace",
-    icon_size = 128,
-    icon = "__base__/graphics/technology/advanced-material-processing.png",
-    effects = {{type = "unlock-recipe", recipe = "micro-turbo-furnace"}},
-    prerequisites = {"micro-express-furnace"},
-    unit = {
-      count = 1600,
-      time = 30,
-      ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
-      },
-    },
-    order = "c-d-d",
-  },
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b0db52b129f70e85838ff9c5f3f70a310e7b1a1e83fcdcbf53ced7b8f659acf0
+size 566

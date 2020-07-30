@@ -1,25 +1,3 @@
-local tiers = require "lib.tiers"
-local items = require "lib.items"
-
-data:extend{
-  items.micro_furnace{
-    tier = tiers.boblogistics.tier_1,
-    order = "c[micro-furnace]-a",
-  },
-  items.micro_furnace{
-    tier = tiers.boblogistics.tier_2,
-    order = "c[micro-furnace]-b",
-  },
-  items.micro_furnace{
-    tier = tiers.boblogistics.tier_3,
-    order = "c[micro-furnace]-c",
-  },
-  items.micro_furnace{
-    tier = tiers.boblogistics.tier_4,
-    order = "c[micro-furnace]-d",
-  },
-  items.micro_furnace{
-    tier = tiers.boblogistics.tier_5,
-    order = "c[micro-furnace]-e",
-  },
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b3086f37687a1b4b6aec1278e987f4b23f117f82d572becef26934ccf144ef4d
+size 584

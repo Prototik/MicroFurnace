@@ -1,18 +1,3 @@
-{
-  "name": "MicroFurnace",
-  "version": "2.3.0",
-  "title": "Micro Furnace",
-  "author": "Prototik",
-  "contact": "me@prok.pw",
-  "homepage": "mods.factorio.com/mods/prototik/MicroFurnace",
-  "description": "Little (1x1) furnaces suitable for (un)loading by loaders.\nPlease install loader mod separately, Loader Redux (for Bob's mods) and Deadlock's Compact Loaders (for FactorioExtended) recommended.",
-  "factorio_version": "0.17",
-  "dependencies": [
-    "base >= 0.17.66",
-    "? boblogistics >= 0.17.15",
-    "? bobplates >= 0.17.11",
-    "? FactorioExtended-Plus-Transport >= 0.2.6",
-    "? deadlock-beltboxes-loaders >= 2.2.0",
-    "? Krastorio >= 1.3.21"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9c19e7e28381a861fa866773553eee8a9d96bf47f14548e8e08d55535ecc76b4
+size 669

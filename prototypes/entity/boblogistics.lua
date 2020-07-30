@@ -1,20 +1,3 @@
-local tiers = require "lib.tiers"
-local entities = require "lib.entities"
-
-data:extend{
-  entities.micro_furnace{
-    tier = tiers.boblogistics.tier_1,
-  },
-  entities.micro_furnace{
-    tier = tiers.boblogistics.tier_2,
-  },
-  entities.micro_furnace{
-    tier = tiers.boblogistics.tier_3,
-  },
-  entities.micro_furnace{
-    tier = tiers.boblogistics.tier_4,
-  },
-  entities.micro_furnace{
-    tier = tiers.boblogistics.tier_5,
-  },
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0211af2a9dd40236c0b7dc741f2af41f52b9c62037352b82bbe8dbb9f6bd8a46
+size 435

@@ -1,19 +1,3 @@
-local function micro_furnace_item(data)
-  local order = data.order
-  local tier  = data.tier
-
-  return {
-    type = "item",
-    name = tier.target,
-    icons = {{icon = "__base__/graphics/icons/electric-furnace.png", tint = tier.color}},
-    icon_size = 32,
-    order = order,
-    subgroup = "smelting-machine",
-    place_result = tier.target,
-    stack_size = 10
-  }
-end
-
-return {
-  micro_furnace = micro_furnace_item
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a46f3bcd7f51c8bb09a938f56612876ba02a7ab03f0b539de00eff9f8befd0dd
+size 439

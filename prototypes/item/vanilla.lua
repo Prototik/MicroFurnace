@@ -1,17 +1,3 @@
-local tiers = require "lib.tiers"
-local items = require "lib.items"
-
-data:extend{
-  items.micro_furnace{
-    tier = tiers.vanilla.tier_1,
-    order = "c[micro-furnace]-a",
-  },
-  items.micro_furnace{
-    tier = tiers.vanilla.tier_2,
-    order = "c[micro-furnace]-b",
-  },
-  items.micro_furnace{
-    tier = tiers.vanilla.tier_3,
-    order = "c[micro-furnace]-c",
-  },
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b01b9ffa39d2a97319f4f9c158567a6af1751ff56d56c06fd83b2c9f089aa213
+size 369

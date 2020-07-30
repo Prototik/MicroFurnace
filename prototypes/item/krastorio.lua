@@ -1,21 +1,3 @@
-local tiers = require "lib.tiers"
-local items = require "lib.items"
-
-data:extend{
-  items.micro_furnace{
-    tier = tiers.krastorio.tier_1,
-    order = "c[micro-furnace]-a",
-  },
-  items.micro_furnace{
-    tier = tiers.krastorio.tier_2,
-    order = "c[micro-furnace]-b",
-  },
-  items.micro_furnace{
-    tier = tiers.krastorio.tier_3,
-    order = "c[micro-furnace]-c",
-  },
-  items.micro_furnace{
-    tier = tiers.krastorio.tier_4,
-    order = "c[micro-furnace]-d",
-  },
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ed3e37d9f3a27006f21a2a94d6d4a1765fad875ce5ff4871b921623a9c54150c
+size 569

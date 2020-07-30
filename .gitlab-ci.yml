@@ -1,15 +1,3 @@
-stages:
-- build
-
-build:
-  stage: build
-  image: alpine
-  before_script:
-  - apk add zip jq git
-  script: ./build.sh
-  only:
-  - tags
-  artifacts:
-    paths:
-    - "*.zip"
-    expire_in: 1 year
+version https://git-lfs.github.com/spec/v1
+oid sha256:b1cc9afe2459383406e4694394dde54381e93d43f5bf1a698961389dd8409d7d
+size 193

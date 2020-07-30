@@ -1,32 +1,3 @@
-require "prototypes.technology.vanilla"
-
-data:extend{
-  {
-    type = "technology",
-    name = "micro-turbo-furnace",
-    icon_size = 128,
-    icon = "__base__/graphics/technology/advanced-material-processing.png",
-    effects = {{type = "unlock-recipe", recipe = "micro-turbo-furnace"}},
-    prerequisites = {"micro-express-furnace"},
-    unit = {
-      count = 1600,
-      time = 30,
-      ingredients = data.raw.technology["logistics-4"].unit.ingredients,
-    },
-    order = "c-d-d",
-  },
-  {
-    type = "technology",
-    name = "micro-ultimate-furnace",
-    icon_size = 128,
-    icon = "__base__/graphics/technology/advanced-material-processing.png",
-    effects = {{type = "unlock-recipe", recipe = "micro-ultimate-furnace"}},
-    prerequisites = {"micro-turbo-furnace"},
-    unit = {
-      count = 3200,
-      time = 30,
-      ingredients = data.raw.technology["logistics-5"].unit.ingredients,
-    },
-    order = "c-d-e",
-  },
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7293f894fba3b1fa135979880d2a588b44b44e1f02e78c2edefd6efbbb3c1e9e
+size 934

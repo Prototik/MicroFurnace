@@ -1,24 +1,3 @@
-require "prototypes.categories.recipe-category"
-require "prototypes.item.item-groups"
-require "prototypes.recipe.furnace-recipe"
-require "prototypes.technology.technology"
-
-local branch = "vanilla"
-
-if mods["Krastorio"] then
-  branch = "krastorio"
-elseif mods["boblogistics"] then
-  branch = "boblogistics"
-elseif mods["FactorioExtended-Plus-Transport"] then
-  branch = "fep"
-end
-
-require ("prototypes.entity." .. branch)
-require ("prototypes.item." .. branch)
-require ("prototypes.recipe." .. branch)
-require ("prototypes.technology." .. branch)
-
-if mods["deadlock-beltboxes-loaders"] then
-  require "prototypes.recipe.dbl"
-  require "prototypes.technology.dbl"
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:56517ea4d51818de6010c06514a04941995b079e9ad25424ff80cb7784c5bb0c
+size 668
